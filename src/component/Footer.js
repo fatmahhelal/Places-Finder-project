@@ -25,13 +25,13 @@ export default class Bottam extends Component {
     };
     setTimeout=(() => {
         this.setState({ position: 1 });
-      }, 7000);
+      }, 10000);
     
     render() {
         this.footerText()
         return (
             <div>
-                <footer class="text-muted py-5" class="Fprimary">
+                <footer class="text-muted py-5" class="Fprimary" id="footer">
                     <div class="container">
                         <p class="float-end mb-1">
                         </p>
@@ -40,16 +40,12 @@ export default class Bottam extends Component {
                         <p class="mb-1">Copyright &copy; Fatimah Alhelal</p>
                         <a href="#" className='uppage'>Back to top</a>
 
-                        <p class="mb-1">.</p>
-                        <p class="mb-1">.</p>
+            
 
 
                         {/* <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.0/getting-started/introduction/">getting started guide</a>.</p> */}
                     </div>
                 </footer>
-
-
-                <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
 
             </div>
