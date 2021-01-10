@@ -15,6 +15,7 @@ import About from './component/About';
 import Places from './component/Places';
 
 function App() {
+  
   return (
     <div className="App">
       <Top></Top>
