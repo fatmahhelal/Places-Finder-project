@@ -13,14 +13,12 @@ export default class Places extends Component {
     //         })
     //         .catch((err) => {
     //             console.log('ERR: ', err);
-    //         });
+    //         });placeLinke={eachPlaces.photos.html_attributions}
     // };
 
     render() {
         const allPlaces = this.props.places.map((eachPlaces, index) => {
-
             return <Card placeName={eachPlaces.name} placeRating={eachPlaces.rating} placeAddress={eachPlaces.formatted_address} num={index} />;
-
         })
         return (
             <div id="topHeader">
