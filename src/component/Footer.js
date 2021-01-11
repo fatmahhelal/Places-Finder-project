@@ -10,25 +10,25 @@ export default class Bottam extends Component {
         };
     }
 
-    footerText = () => {
-        console.log('send API');
-        axios
-            .get(`http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json`)
-            .then((response) => {
-                console.log('RESPONSE: ', response);
-                console.log('DATA: ', response.data);
-                this.setState({quote: response.data.quoteText});
-            })
-            .catch((err) => {
-                console.log('ERR: ', err);
-            });
-    };
-    setTimeout=(() => {
-        this.setState({ position: 1 });
-      }, 10000);
+    // footerText = () => {
+    //     console.log('send API');
+    //     axios
+    //         .get(`http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json`)
+    //         .then((response) => {
+    //             console.log('RESPONSE: ', response);
+    //             console.log('DATA: ', response.data);
+    //             this.setState({quote: response.data.quoteText});
+    //         })
+    //         .catch((err) => {
+    //             console.log('ERR: ', err);
+    //         });
+    // };
+    // setTimeout=(() => {
+    //     this.setState({ position: 1 });
+    //   }, 10000);
     
     render() {
-        this.footerText()
+        // this.footerText()
         return (
             <div>
                 <footer class="text-muted py-5" class="Fprimary" id="footer">
