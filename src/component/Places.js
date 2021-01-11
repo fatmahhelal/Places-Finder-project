@@ -19,7 +19,7 @@ export default class Places extends Component {
     render() {
         this.placesText()
         return (
-            <div>
+            <div id="topHeader">
                 <Card/>
             </div>
         )

@@ -21,7 +21,7 @@ function App() {
         <div className="App">
             <Router>
                 <div>
-                    <nav class="navbar navbar-expand-lg navbar-light Fprimary" id="topHeader">
+                    <nav class="navbar navbar-expand-lg navbar-light Fprimary" >
                         <div class="container-fluid">
                             <a class="py-2" href="#" aria-label="Product">
                                 <Link to="/" class="nav-link active" aria-current="page"> <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-6/155/vector_285_03-01-512.png" width="24" height="24" /></Link>
