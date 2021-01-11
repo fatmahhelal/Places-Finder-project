@@ -13,7 +13,7 @@ export default class Banner extends Component {
 
     getImageAndChangeBanner= () => {
         console.log('send img API');
-        const API_1 = `https://api.unsplash.com/photos/random?client_id=KQeM1A0CAOF8KU5Q71kEGH_2xKVAtov_c0EkQdxsb4s`;
+        const API_1 = `https://api.unsplash.com/photos/random?client_id=GSDJ5G2k_J6GTdJ60QaCArDS4fFbLGTdowFNwzrCTeo`;
         axios
             .get(API_1)
             .then((response) => {
@@ -25,10 +25,11 @@ export default class Banner extends Component {
     };
 
     render() {
+        this.getImageAndChangeBanner()
         return (
             <div>
                 <div>
-                <img src={this.state.image_url} width="100%" height="600px" alt='' onClick={this.getImageAndChangeBanner}/>
+                <img src={this.state.image_url} width="100%" height="600px" alt='' />
                     <div className="centered">DISCOVER THE WORLD</div>
                 </div>
             </div>
