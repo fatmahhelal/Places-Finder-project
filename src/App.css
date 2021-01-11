@@ -79,3 +79,7 @@
 .whiteCo {
   background-color: white !important;
 }
+
+#topHeader{
+  margin-bottom: 50px;
+}
