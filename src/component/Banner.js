@@ -7,9 +7,15 @@ export default class Banner extends Component {
         super();
         this.state = {
             image_url: "https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg",
-
         };
     }
+    
+    componentDidMount() {
+        setTimeout(() => {
+            this.getImageAndChangeBanner()
+        }, 500)
+      }
+      
 
     getImageAndChangeBanner= () => {
         console.log('send img API');
@@ -25,7 +31,7 @@ export default class Banner extends Component {
     };
 
     render() {
-        this.getImageAndChangeBanner()
+        // this.getImageAndChangeBanner()
         return (
             <div>
                 <div>

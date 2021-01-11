@@ -18,23 +18,20 @@ export default class App extends Component {
     constructor(props) {
         super();
         this.state = {
-            name: "",
-            rating: "",
-            address: '',
             places: {},
             img_place: "https://img.icons8.com/ios/452/no-image.png"
         };
     }
+
+    componentDidMount() {
+        this.getPlaces()
+    }
+
     getPlaces = () => {
         console.log('send API');
         axios
             .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=restaurant&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
             .then((response) => {
-                // console.log('RESPONSE: ', response);
-                // console.log('Name: ', response.data.results[2].name);
-                // console.log('Rating: ', response.data.results[2].rating);
-                // console.log('Rating: ', response.data.results[2].formatted_address);
-                // console.log('Name: ', response.data.results[2].photos[0].photo_reference);
                 this.setState({ places: response.data.results })
             })
             .catch((err) => {
@@ -58,7 +55,7 @@ export default class App extends Component {
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                         <li class="nav-item">
-                                            <Link to="/Places" class="nav-link active" aria-current="page" href="/Places" onClick={this.getPlaces()} places={this.state.places}>PLACES</Link>
+                                            <Link to="/Places" class="nav-link active" aria-current="page" href="/Places">PLACES</Link>
                                         </li>
                                         <li class="nav-item">
                                             <Link to="/Favorite" class="nav-link active" aria-current="page" href="#">FAVORITE</Link>
@@ -75,7 +72,12 @@ export default class App extends Component {
                             </div>
                         </nav>
                         <Route exact path="/" component={Banner}></Route>
-                        <Route exact path="/Places" component={Places}></Route>
+                        <Route
+                            path='/Places'
+                            render={(props) => (
+                                <Places {...props} places={this.state.places} />
+                            )}
+                        />
                         <Route exact path="/favorite" component={Favorite}></Route>
                         <Route exact path="/About" component={About}></Route>
                     </div>
