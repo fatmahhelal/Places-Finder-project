@@ -17,9 +17,16 @@ export default class Places extends Component {
     //             console.log('ERR: ', err);
     //         });placeLinke={eachPlaces.photos.html_attributions}
     // };
-
+    componentDidMount() {
+        if (!this.props.places) {
+            console.log("use local")
+        } else {
+            console.log("use its");
+        }
+    }
     render() {
-        const allPlaces = this.props.places.map((eachPlaces, index) => {
+        const res=this.props.places
+        const allPlaces = res.map((eachPlaces, index) => {
             const photo = eachPlaces.photos
             console.log(photo);
             return <Card placeName={eachPlaces.name} placeRating={eachPlaces.rating}

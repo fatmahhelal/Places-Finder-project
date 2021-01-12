@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import './App.css';
 import Banner from './component/Banner';
 import Footer from './component/Footer';
 import Favorite from './component/Favorite'
@@ -15,91 +14,22 @@ import About from './component/About';
 import Places from './component/Places';
 import Mall from './component/Mall';
 import Search from './component/Search';
-
-
-
-export default class App extends Component {
+export default class Top extends Component {
     constructor(props) {
-        super();
-        this.state = {
-            places: {},
-            placesCoffe: {},
-            placesShopping: {},
-            faves: {},
-            searchWord: "",
-            searchResultArry: {},
-            img_place: "https://img.icons8.com/ios/452/no-image.png"
-        };
+    super();
+    this.state = {
+        searchWord: "",
     }
-
-    componentDidMount() {
-        this.getRestaurant()
-        this.getCffe()
-        this.getMall()
-    }
-
-
-    // getFav() {
-    //     var faves = [...this.state.faves];
-    //     var placendex = faves.indexOf(place)
-
-    //     if (placendex === -1) {
-    //         faves.push(place);
-    //         console.log(`Adding ${place.name} to faves...`)
-    //     } else {
-    //         faves.splice(placendex, 1);
-    //         console.log(`Removing ${place.name} to faves...`)
-    //     }
-    //     this.setState({ faves })
-
-    // }
-
-    getRestaurant = () => {
-        axios
-            .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=restaurant&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
-            .then((response) => {
-                this.setState({ places: response.data.results })
-            })
-            .catch((err) => {
-                console.log('ERR: ', err);
-            });
-    };
-
-    getMall = () => {
-        axios
-            .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=shopping_mall&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
-            .then((response) => {
-                this.setState({ placesShopping: response.data.results })
-            })
-            .catch((err) => {
-                console.log('ERR: ', err);
-            });
-    };
-
-    getCffe = () => {
-        axios
-            .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=cafe&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
-            .then((response) => {
-                this.setState({ placesCoffe: response.data.results })
-            })
-            .catch((err) => {
-                console.log('ERR: ', err);
-            });
-    };
-    componentWillUpdate() {
-        localStorage.setItem('places', JSON.stringify(this.state.places));
-        localStorage.setItem('placesCoffe', JSON.stringify(this.state.placesCoffe));
-        localStorage.setItem('placesShopping', JSON.stringify(this.state.placesShopping));
-    }
-    render() {
-        return (
-            <div className="App">
-                <Router>
+}
+  render() {
+    return (
+      <div>
+         <Router>
                     <div>
                         <nav class="navbar navbar-expand-lg navbar-light Fprimary" >
                             <div class="container-fluid">
                                 <a class="py-2" href="#" aria-label="Product">
-                                    <Link to="/" class="nav-link active" aria-current="page"> <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-6/155/vector_285_03-01-512.png" width="24" height="24" /></Link>
+                                    <Link to="App" class="nav-link active" aria-current="page"> <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-6/155/vector_285_03-01-512.png" width="24" height="24" /></Link>
                                 </a>
                                 {/* <a class="navbar-brand" href="#">Home</a> */}
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -138,7 +68,7 @@ export default class App extends Component {
                                 </div>
                             </div>
                         </nav>
-                        <Route exact path="/" component={Banner}></Route>
+                        <Route exact path="App" component={Banner}></Route>
                         <Route
                             path='/Mall'
                             render={(props) => (
@@ -175,11 +105,7 @@ export default class App extends Component {
 
                     </div>
                 </Router>
-
-                <div className='topHeader'>
-                    <Footer />
-                </div>
-            </div>
-        );
-    }
+      </div>
+    )
+  }
 }

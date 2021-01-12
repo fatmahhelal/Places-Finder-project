@@ -23,6 +23,18 @@ export default class Card extends Component {
     //     console.log(element.photo_reference)
     //       console.log(element.html_attributions)
     //   });
+    
+    // const ph= this.props.photo.forEach(element => {
+    //   if (!element.photo_reference){
+    //    console.log("canot", this.props.photo)
+
+    //   }else{
+    //    console.log(this.props.photo)
+    //    console.log(element.photo_reference)
+    //      console.log(element.html_attributions)
+    //   }
+     
+    //  });
       
     return (
       <div id="topHeader" className="boot">

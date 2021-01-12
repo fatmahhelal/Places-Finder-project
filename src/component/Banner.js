@@ -18,7 +18,6 @@ export default class Banner extends Component {
 
 
     getImageAndChangeBanner = () => {
-        console.log('send img API');
         const API_1 = `https://api.unsplash.com/photos/random?client_id=GSDJ5G2k_J6GTdJ60QaCArDS4fFbLGTdowFNwzrCTeo`;
         axios
             .get(API_1)
