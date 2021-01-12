@@ -34,24 +34,28 @@ export default class Banner extends Component {
         // this.getImageAndChangeBanner()
         return (
             <div>
-                <div>
+                <div className="bott">
                     <img src={this.state.image_url} width="100%" height="655px" alt='' />
                     <div className="centered"> DISCOVER THE WORLD WITH LOVE </div>
                 </div>
-
-                {/* <div class="container boot">
-                    <div class="cardbanner">
-                        <img />
-                        <h3></h3>
+                <div class=" boot">
+                    <div class="cardbanner ">
+                        <img alt=''></img>                    
+                        <div class="card-body">
+                            <h1 class="card-text">Mall</h1>
+                        </div>
                     </div> <div class="cardbanner">
-                        <img />
-                        <h3></h3>
+                    <img alt=''></img>                    
+                        <div class="card-body">
+                            <h1 class="card-text">Restaurant</h1>
+                        </div>
                     </div> <div class="cardbanner">
-                        <img />
-                        <h3></h3>
+                    <img alt=''></img>                    
+                        <div class="card-body">
+                            <h1 class="card-text">Coffee</h1>
+                        </div>
                     </div>
-                </div> */}
-            </div>
+                </div></div>
 
         )
     }

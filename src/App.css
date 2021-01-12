@@ -115,16 +115,18 @@
   left: 20%;
   right: 20%;
 }
-
+.bott{
+  margin-bottom: 50px;
+  bottom: 50px;
+}
 .card {
   width: 400px;
   height: 550px;
   padding: 5px;
   margin: 20px;
   float: left;
-  box-shadow: 5px 5px 5px 5px grey;
+  box-shadow: 3px 3px 3px 3px rgb(206, 204, 204);
   position: relative;
-  top: 30px;
   bottom: 30px;
   text-align: center;
   display: inline;
@@ -137,14 +139,13 @@
   bottom: 1%;
 }
 .cardbanner{
-  width: 380px;
+  width: 400px;
   height: 550px;
   padding: 5px;
   margin: 20px;
   float: left;
-  box-shadow: 5px 5px 5px 5px grey;
+  box-shadow: 3px 3px 3px 3px rgb(206, 204, 204);
   position: relative;
-  top: 30px;
   bottom: 30px;
   text-align: center;
   display: inline;

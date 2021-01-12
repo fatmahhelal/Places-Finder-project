@@ -40,6 +40,8 @@ export default class App extends Component {
             .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=restaurant&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
             .then((response) => {
                 this.setState({ places: response.data.results })
+                localStorage.setItem('places', 'response.data.results');
+
             })
             .catch((err) => {
                 console.log('ERR: ', err);
@@ -69,7 +71,6 @@ export default class App extends Component {
                 console.log('ERR: ', err);
             });
     };
-    // myStorage = window.localStorage;
 
     render() {
         return (
