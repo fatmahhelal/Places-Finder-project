@@ -13,7 +13,7 @@ import {
 } from "react-router-dom";
 import About from './component/About';
 import Places from './component/Places';
-import Mall from './component/Mall';
+import Shopping from './component/Shopping';
 import Search from './component/Search';
 
 
@@ -35,7 +35,7 @@ export default class App extends Component {
     componentDidMount() {
         this.getRestaurant()
         this.getCffe()
-        this.getMall()
+        this.getShopping()
     }
     // getFav() {
     //     var faves = [...this.state.faves];
@@ -63,7 +63,7 @@ export default class App extends Component {
             });
     };
 
-    getMall = () => {
+    getShopping = () => {
         axios
             .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=shopping_mall&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
             .then((response) => {
@@ -108,7 +108,7 @@ export default class App extends Component {
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                         <li class="nav-item">
-                                            <Link to="/Mall" class="nav-link active" aria-current="page" href="/Mall">Mall</Link>
+                                            <Link to="/Shopping" class="nav-link active" aria-current="page" href="/Shopping">Shopping</Link>
                                         </li>
                                         <li class="nav-item">
                                             <Link to="/Places" class="nav-link active" aria-current="page" href="/Places">Restaurant</Link>
@@ -140,7 +140,7 @@ export default class App extends Component {
                         </nav>
                         <Route exact path="/" component={Banner}></Route>
                         <Route
-                            path='/Mall'
+                            path='/Shopping'
                             render={(props) => (
                                 <Places {...props} places={this.state.placesShopping} />
                             )}
