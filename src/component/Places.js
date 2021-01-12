@@ -20,10 +20,11 @@ export default class Places extends Component {
 
     render() {
         const allPlaces = this.props.places.map((eachPlaces, index) => {
+            const photo = eachPlaces.photos
+            console.log(photo);
             return <Card placeName={eachPlaces.name} placeRating={eachPlaces.rating}
-             placeAddress={eachPlaces.formatted_address} num={index} 
-            photo={eachPlaces.photos} />;
-            
+                placeAddress={eachPlaces.formatted_address} num={index}
+                photo={eachPlaces.photos} />;
         })
         return (
             <div id="topHeader">

@@ -24,6 +24,7 @@ export default class App extends Component {
             places: {},
             placesCoffe: {},
             placesShopping: {},
+            faves:{},
             img_place: "https://img.icons8.com/ios/452/no-image.png"
         };
     }
@@ -34,6 +35,22 @@ export default class App extends Component {
         this.getMall()
     }
 
+    
+    getFav(place) {
+        var faves = [...this.state.faves];
+        var placendex = faves.indexOf(place)
+    
+        if (placendex === -1) {
+          faves.push(place);
+          console.log(`Adding ${place.name} to faves...`)
+        } else {
+          faves.splice(placendex, 1);
+          console.log(`Removing ${place.name} to faves...`)
+        }
+        this.setState({ faves })
+    
+      }
+      
     getPlaces = () => {
         console.log('send API');
         axios
@@ -121,7 +138,7 @@ export default class App extends Component {
                             <Route
                                 path='/Places'
                                 render={(props) => (
-                                    <Places {...props} places={this.state.places} fun={this.getPlaces}
+                                    <Places {...props} places={this.state.places} fun={this.getPlaces()}
                                     />
                                 )}
                             />
@@ -131,8 +148,13 @@ export default class App extends Component {
                                 render={(props) => (
                                     <Places {...props} places={this.state.placesCoffe} />
                                 )}
-                            />
-                            <Route exact path="/favorite" component={Favorite}></Route>
+                            /> 
+                            <Route
+                            path='/favorite'
+                            render={(props) => (
+                                <Favorite {...props} places={this.state.faves} favFuncation={ this.getFav}/>
+                            )}
+                        />
                             <Route exact path="/About" component={About}></Route>
                     </div>
                 </Router>

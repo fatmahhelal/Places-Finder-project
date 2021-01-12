@@ -15,7 +15,6 @@ export default class Bottam extends Component {
         }, 500)
       }
     footerText = () => {
-        console.log('send API');
         axios
             .get(`http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json`)
             .then((response) => {

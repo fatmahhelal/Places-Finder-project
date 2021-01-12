@@ -20,11 +20,10 @@ export default class Card extends Component {
   render() {
     //  const ph= this.props.photo.forEach(element => {
     //     console.log(this.props.photo)
-    //     console.log(element.photo_reference[0])
+    //     console.log(element.photo_reference)
     //       console.log(element.html_attributions)
-
-
     //   });
+      
     return (
       <div id="topHeader" className="boot">
         <div class="card">
@@ -36,7 +35,9 @@ export default class Card extends Component {
 
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group botCon">
-              <button type="button" class="btn btn-outline-success btnMore">View</button>
+              <button type="button" class="btn btn-outline-success btnMore">More
+                {/* {this.props.linke} */}
+                </button>
               <button type="button" class="btn btn-outline-success btnMore">Favorite</button>
             </div>
           </div>
@@ -46,21 +47,3 @@ export default class Card extends Component {
     )
   }
 }
-
-
-
-// <div class="container">
-//   <div class="row">
-//     <div class="col-sm">
-//       One of three columns
-//     </div>
-//     <div class="col-sm">
-//       One of three columns
-//     </div>
-//     <div class="col-sm">
-//       One of three columns
-//     </div>
-//   </div>
-// </div>
-
-
