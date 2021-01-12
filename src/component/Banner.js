@@ -6,7 +6,7 @@ export default class Banner extends Component {
     constructor(props) {
         super();
         this.state = {
-            image_url: "https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg",
+            image_url: "https://images.unsplash.com/photo-1506111583091-becfd4bfa05d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
         };
     }
 
@@ -35,21 +35,21 @@ export default class Banner extends Component {
             <div>
                 <div className="bott">
                     <img src={this.state.image_url} width="100%" height="655px" alt='' />
-                    <div className="centered"> DISCOVER THE WORLD WITH LOVE </div>
+                    <div className="centered">... DISCOVER THE WORLD Around You ... </div>
                 </div>
                 <div class=" boot">
                     <div class="cardbanner ">
-                        <img alt=''></img>                    
+                        <img src='https://images.unsplash.com/photo-1574634534894-89d7576c8259?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80' width='380px' height='450px'></img>                    
                         <div class="card-body">
-                            <h1 class="card-text">Mall</h1>
+                            <h1 class="card-text">Shopping</h1>
                         </div>
                     </div> <div class="cardbanner">
-                    <img alt=''></img>                    
+                    <img src='https://images.unsplash.com/photo-1502301103665-0b95cc738daf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80' width='380px' height='450px'></img>                    
                         <div class="card-body">
                             <h1 class="card-text">Restaurant</h1>
                         </div>
                     </div> <div class="cardbanner">
-                    <img alt=''></img>                    
+                    <img src='https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80' width='380px' height='450px'></img>                    
                         <div class="card-body">
                             <h1 class="card-text">Coffee</h1>
                         </div>

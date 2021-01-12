@@ -37,8 +37,6 @@ export default class App extends Component {
         this.getCffe()
         this.getMall()
     }
-
-
     // getFav() {
     //     var faves = [...this.state.faves];
     //     var placendex = faves.indexOf(place)
@@ -86,11 +84,13 @@ export default class App extends Component {
                 console.log('ERR: ', err);
             });
     };
+    
     componentWillUpdate() {
         localStorage.setItem('places', JSON.stringify(this.state.places));
         localStorage.setItem('placesCoffe', JSON.stringify(this.state.placesCoffe));
         localStorage.setItem('placesShopping', JSON.stringify(this.state.placesShopping));
     }
+    
     render() {
         return (
             <div className="App">
@@ -169,7 +169,7 @@ export default class App extends Component {
                         <Route
                             path='/Search'
                             render={(props) => (
-                                <Search {...props} searchWord={this.state.searchWord} />
+                                <Search {...props} searchWord={this.state.searchResultArry} />
                             )}
                         />
 

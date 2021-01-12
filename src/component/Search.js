@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import Card from './Card'
+import SearchRe from './SearchRe';
 
 export default class Search extends Component {
     constructor(props) {
@@ -33,15 +34,9 @@ export default class Search extends Component {
 
     render() {
 
-        // var allPlaces = this.state.searchResultArry.map((eachPlaces, index) => {
-        //     return <h1>Lovves</h1>
-            // <Card placeName={eachPlaces.name} placeRating={eachPlaces.rating}
-            //     placeAddress={eachPlaces.formatted_address} num={index}
-            //     photo={eachPlaces.photos} />;
-        // })
         return (
             <div>
-                {/* // {allPlaces}     */}
+                <SearchRe searchResultArry={this.state.searchResultArry}/>
             </div>
         )
     }
