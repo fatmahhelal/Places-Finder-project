@@ -160,3 +160,12 @@ a{
   width: 100%;
   height: 655px;
 }
+
+.ratingCon{
+  position: absolute;
+  bottom: 70px;
+  left: 20%;
+  right: 20%;
+  background-color:#A0DAA9 ;
+  color: whitesmoke;
+}

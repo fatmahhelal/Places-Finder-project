@@ -43,7 +43,8 @@ export default class Card extends Component {
         <div class="card-body">
           <h1 class="card-text">{this.props.placeName}.</h1>
           <p class="card-text">{this.props.placeAddress}</p>
-          <p class="card-text">{this.props.placeRating}</p>
+          
+          <p class="card-text ratingCon"> Rating: {this.props.placeRating}/5</p>
 
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group botCon">
