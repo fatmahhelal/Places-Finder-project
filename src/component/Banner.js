@@ -35,7 +35,7 @@ export default class Banner extends Component {
         return (
             <div>
                 <div>
-                <img src={this.state.image_url} width="100%" height="600px" alt='' />
+                <img src={this.state.image_url} width="100%" height="655px" alt='' />
                     <div className="centered"> DISCOVER THE WORLD WITH LOVE </div>
                     
                 </div>

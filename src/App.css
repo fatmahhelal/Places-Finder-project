@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   font-family: 'Fira Mono', sans-serif;
-
 }
 
 .App-logo {
@@ -82,7 +81,7 @@
   background-color: white !important;
 }
 
-#topHeader{
+#topHeader {
   margin-top: 50px;
 }
 
@@ -94,15 +93,19 @@
   font-size: 20px;
   color: gray;
   background-color: white;
-  font-family: 'Fira Mono', sans-serif  !important;
-
+  font-family: 'Fira Mono', sans-serif !important;
 }
 
-.cardWidth{
-  width:50px !important
+.cardWidth {
+ width: 500px;
+ height: 400px;
+  position: fla;
+  text-align: center;
+  display: inline !important
+  
 }
 
-.btnMore{
-  width:100px ;
-  margin:5px !important
+.btnMore {
+  width: 100px;
+  margin: 5px !important
 }
