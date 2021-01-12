@@ -9,15 +9,15 @@ export default class Banner extends Component {
             image_url: "https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg",
         };
     }
-    
+
     componentDidMount() {
         setTimeout(() => {
             this.getImageAndChangeBanner()
         }, 500)
-      }
-      
+    }
 
-    getImageAndChangeBanner= () => {
+
+    getImageAndChangeBanner = () => {
         console.log('send img API');
         const API_1 = `https://api.unsplash.com/photos/random?client_id=GSDJ5G2k_J6GTdJ60QaCArDS4fFbLGTdowFNwzrCTeo`;
         axios
@@ -35,10 +35,22 @@ export default class Banner extends Component {
         return (
             <div>
                 <div>
-                <img src={this.state.image_url} width="100%" height="655px" alt='' />
+                    <img src={this.state.image_url} width="100%" height="655px" alt='' />
                     <div className="centered"> DISCOVER THE WORLD WITH LOVE </div>
-                    
                 </div>
+
+                {/* <div class="container boot">
+                    <div class="cardbanner">
+                        <img />
+                        <h3></h3>
+                    </div> <div class="cardbanner">
+                        <img />
+                        <h3></h3>
+                    </div> <div class="cardbanner">
+                        <img />
+                        <h3></h3>
+                    </div>
+                </div> */}
             </div>
 
         )

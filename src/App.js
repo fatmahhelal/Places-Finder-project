@@ -69,6 +69,8 @@ export default class App extends Component {
                 console.log('ERR: ', err);
             });
     };
+    // myStorage = window.localStorage;
+
     render() {
         return (
             <div className="App">
@@ -135,8 +137,8 @@ export default class App extends Component {
                 </Router>
                    
                    
-                   <div >
-                   <Footer className='topHeader'/>
+                   <div  className='topHeader'>
+                   <Footer/>
                        </div> 
             </div>
         );

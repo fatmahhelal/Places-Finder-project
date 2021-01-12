@@ -36,8 +36,8 @@ export default class Card extends Component {
 
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group botCon">
-              <button type="button" class=" btnMore">View</button>
-              <button type="button" class=" btnMore">Favorite</button>
+              <button type="button" class="btn btn-outline-success btnMore">View</button>
+              <button type="button" class="btn btn-outline-success btnMore">Favorite</button>
             </div>
           </div>
         </div>
