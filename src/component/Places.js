@@ -29,6 +29,8 @@ export default class Places extends Component {
             <div id="topHeader">
                 {/* <Card /> */}
                 {allPlaces}
+                <div className='sp'></div>
+
             </div>
         )
     }

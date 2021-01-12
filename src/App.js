@@ -133,7 +133,11 @@ export default class App extends Component {
                             <Route exact path="/About" component={About}></Route>
                     </div>
                 </Router>
-                    <Footer />
+                   
+                   
+                   <div >
+                   <Footer className='topHeader'/>
+                       </div> 
             </div>
         );
     }

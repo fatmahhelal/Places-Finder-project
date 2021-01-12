@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Fira Mono', sans-serif;
+  font-family: 'Fira Mono', sans-serif !important;
 }
 
 .App-logo {
@@ -69,12 +69,12 @@
   bottom: 0;
   right: 0;
   display: block;
-  margin-top: 400px;
+  margin-top: 40%;
   display: flex;
   bottom: 20px;
   text-align: center;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .whiteCo {
@@ -97,15 +97,42 @@
 }
 
 .cardWidth {
- width: 500px;
- height: 400px;
-  position: fla;
+  width: 500px;
+  height: 400px;
+  position: relative;
   text-align: center;
   display: inline !important
-  
 }
 
 .btnMore {
   width: 100px;
   margin: 5px !important
+}
+.botCon{
+  position: absolute;
+  bottom: 10px;
+  left: 20%;
+  right: 20%;
+}
+
+.card {
+  width: 400px;
+  height: 550px;
+  padding: 5px;
+  margin: 20px;
+  float: left;
+  box-shadow: 5px 5px 5px 5px #4e5a48;
+  position: relative;
+  top: 30px;
+  bottom: 30px;
+  text-align: center;
+  display: inline;
+}
+.boot{
+  margin-bottom: 30px;
+  left: 5%;
+  position: relative;
+  top: 30px;
+  bottom: 5%;
+  margin-bottom: ;
 }

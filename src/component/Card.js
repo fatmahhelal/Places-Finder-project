@@ -18,39 +18,31 @@ export default class Card extends Component {
 
 
   render() {
-  //  const ph= this.props.photo.forEach(element => {
-  //     console.log(this.props.photo)
-  //     console.log(element.photo_reference)
+    //  const ph= this.props.photo.forEach(element => {
+    //     console.log(this.props.photo)
+    //     console.log(element.photo_reference[0])
+    //       console.log(element.html_attributions)
 
-  //   });
 
+    //   });
     return (
-<div id="topHeader">
+      <div id="topHeader" className="boot">
+        <div class="card">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Place</text></svg>
+        <div class="card-body">
+          <h1 class="card-text">{this.props.placeName}.</h1>
+          <p class="card-text">{this.props.placeAddress}</p>
+          <p class="card-text">{this.props.placeRating}</p>
 
-  <div class="album py-5 bg-light" className="whiteCo" >
-    <div class="container">
-      <div class=" row-cols-md-3 g-3 cardWidth">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Place</text></svg>
-            <div class="card-body">
-              <h1 class="card-text">{this.props.placeName}.</h1>
-
-              <p class="card-text">{this.props.placeAddress}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Favorite</button>
-                </div>
-              </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group botCon">
+              <button type="button" class=" btnMore">View</button>
+              <button type="button" class=" btnMore">Favorite</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
+      </div>
     )
   }
 }
