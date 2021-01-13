@@ -97,7 +97,7 @@
 }
 
 .cardWidth {
-  width: 500px;
+  width: 380px;
   height: 400px;
   position: relative;
   text-align: center;
@@ -121,7 +121,7 @@
 }
 .card {
   width: 400px;
-  height: 550px;
+  height: 650px;
   padding: 5px;
   margin: 20px;
   float: left;

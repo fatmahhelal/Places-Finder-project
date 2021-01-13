@@ -6,7 +6,7 @@ export default class Card extends Component {
   constructor(props) {
     super();
     this.state = {
-      img_place: "https://icon-library.com/images/me-icon/me-icon-20.jpg"
+      img_place: "https://cdn.onlinewebfonts.com/svg/img_347678.png"
     };
   }
 
@@ -23,11 +23,20 @@ export default class Card extends Component {
     //     console.log(element.photo_reference)
     //       console.log(element.html_attributions)
     //   });
+  //   const res=this.props.photo
+  //   console.log(res[0].photo_reference);
+  //  var phot= this.setState({img_place:res[0].photo_reference})
+
+    // const ph= this.props.photo.map((element, i) => {
+    //   console.log(this.props.photo)
+    //   console.log(element.photo_reference)
+    //     console.log(element.html_attributions)
+    //    return this.setState({img_place: element.photo_reference})
+    // });
     
     // const ph= this.props.photo.forEach(element => {
     //   if (!element.photo_reference){
     //    console.log("canot", this.props.photo)
-
     //   }else{
     //    console.log(this.props.photo)
     //    console.log(element.photo_reference)
@@ -39,7 +48,7 @@ export default class Card extends Component {
     return (
       <div id="topHeader" className="boot">
         <div class="card">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Place</text></svg>
+        <img src={this.state.img_place} width='380px' height='300px'></img>                    
         <div class="card-body">
           <h1 class="card-text">{this.props.placeName}.</h1>
           <p class="card-text">{this.props.placeAddress}</p>

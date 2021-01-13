@@ -29,9 +29,14 @@ export default class Places extends Component {
         const allPlaces = res.map((eachPlaces, index) => {
             const photo = eachPlaces.photos
             console.log(photo);
+            // const ph= photo.map((element, ind) => {
+            //         console.log(element.photo_reference)
+            //           console.log(element.html_attributions)
+            //       });
             return <Card placeName={eachPlaces.name} placeRating={eachPlaces.rating}
                 placeAddress={eachPlaces.formatted_address} num={index}
-                photo={eachPlaces.photos} />;
+                
+                photo={eachPlaces.photo} />;
         })
         return (
             <div id="topHeader">
