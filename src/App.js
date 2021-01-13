@@ -38,7 +38,7 @@ export default class App extends Component {
 
     getRestaurant = () => {
         axios
-            .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=restaurant&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
+            .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=tourist_attraction&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
             .then((response) => {
                 this.setState({ places: response.data.results })
                 console.log(this.state.places);
@@ -47,7 +47,25 @@ export default class App extends Component {
                 console.log('ERR: ', err);
             });
     };
-
+    
+    searchResult = () => {
+        var search = this.state.searchWord
+        var query = `https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&input=${search}&fields=Website,photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`
+        axios
+            .get(query)
+            .then((response) => {
+                if (!response) {
+                    console.log('no data ');
+                }
+                else {
+                    console.log('here search re: ', response.data.results);
+                    this.setState({ searchResultArry: response.data.results })
+                }
+            })
+            .catch((err) => {
+                console.log('ERR: ', err);
+            });
+    };
     getShopping = () => {
         axios
             .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=shopping_mall&fields=url,photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
@@ -98,10 +116,10 @@ export default class App extends Component {
                                             <Link to="/Shopping" class="nav-link active" aria-current="page" href="/Shopping">Shopping</Link>
                                         </li>
                                         <li class="nav-item">
-                                            <Link to="/Places" class="nav-link active" aria-current="page" href="/Places">Restaurant</Link>
+                                            <Link to="/Places" class="nav-link active" aria-current="page" href="/Places">Tourist</Link>
                                         </li>
                                         <li class="nav-item">
-                                            <Link to="/Coffee" class="nav-link active" aria-current="page" href="/Coffee">Coffee</Link>
+                                            <Link to="/Coffee" class="nav-link active" aria-current="page" href="/Coffee">Coffee&Restaurants</Link>
                                         </li>
                                         <li class="nav-item">
                                             <Link to="/Favorite" class="nav-link active" aria-current="page" href="#">FAVORITE</Link>
@@ -118,7 +136,7 @@ export default class App extends Component {
                                             value={this.state.searchWord}
                                         />
                                         <Link to="/Search">
-                                            <button class="fa fa-search" class="btn btn-outline-success" type="button">
+                                            <button class="fa fa-search" class="btn btn-outline-success" type="button" onClick={this.searchResult}>
                                                 Search</button>
                                         </Link>
                                     </form>
@@ -156,7 +174,7 @@ export default class App extends Component {
                         <Route
                             path='/Search'
                             render={(props) => (
-                                <Search {...props} searchWord={this.state.searchWord} />
+                                <Search {...props} searchResultArry={this.state.searchResultArry} />
                             )}
                         />
 

@@ -35,7 +35,7 @@ export default class Banner extends Component {
             <div>
                 <div className="bott">
                     <img src={this.state.image_url} width="100%" height="655px" alt='' />
-                    <div className="centered">... DISCOVER THE WORLD Around You ... </div>
+                    <div className="centered">... DISCOVER THE WORLD AROUND YOU ... </div>
                 </div>
                 <div class=" boot">
                     <div class="cardbanner ">

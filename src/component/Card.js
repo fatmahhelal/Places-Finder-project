@@ -8,7 +8,8 @@ export default class Card extends Component {
     this.state = {
       imgRef: "",
       linkRef: '',
-      img_place: "https://cdn.onlinewebfonts.com/svg/img_347678.png"
+      img_place: "https://cdn.onlinewebfonts.com/svg/img_347678.png",
+      FavArry: []
     };
   }
 
@@ -50,6 +51,18 @@ export default class Card extends Component {
         console.log('ERR: ', err);
       });
   }
+
+  // getFav() {
+  //   var faves = [...this.state.faves];
+  //   if (placendex === -1) {
+  //     FavArry.push(place);
+  //     console.log(`Adding ${place.name} to faves...`)
+  //   } else {
+  //     faves.splice(placendex, 1);
+  //     console.log(`Removing ${place.name} to faves...`)
+  //   }
+  //   this.setState({ faves })
+  // }
 
   render() {
     return (
