@@ -22,7 +22,7 @@ export default class App extends Component {
     constructor(props) {
         super();
         this.state = {
-            places:[],
+            places: [],
             placesCoffe: [],
             placesShopping: [],
             faves: {},
@@ -58,7 +58,6 @@ export default class App extends Component {
             .then((response) => {
                 this.setState({ places: response.data.results })
                 console.log(this.state.places);
-
             })
             .catch((err) => {
                 console.log('ERR: ', err);
@@ -67,9 +66,10 @@ export default class App extends Component {
 
     getShopping = () => {
         axios
-            .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=shopping_mall&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
+            .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=shopping_mall&fields=url,photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
             .then((response) => {
                 this.setState({ placesShopping: response.data.results })
+                console.log("shopping", response.data.results);
 
             })
             .catch((err) => {
@@ -87,13 +87,13 @@ export default class App extends Component {
                 console.log('ERR: ', err);
             });
     };
-    
+
     componentWillUpdate() {
         localStorage.setItem('places', JSON.stringify(this.state.places));
         localStorage.setItem('placesCoffe', JSON.stringify(this.state.placesCoffe));
         localStorage.setItem('placesShopping', JSON.stringify(this.state.placesShopping));
     }
-    
+
     render() {
         return (
             <div className="App">

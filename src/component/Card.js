@@ -7,47 +7,53 @@ export default class Card extends Component {
     super();
     this.state = {
       imgRef: "",
-      linkRef:"",
+      linkRef: '',
       img_place: "https://cdn.onlinewebfonts.com/svg/img_347678.png"
     };
   }
 
   componentDidMount() {
+    this.getLinke()
     this.getRefrencce()
-    console.log("this ref", this.state.imgRef);
-    console.log("this Link", this.state.linkRef);
-    // const photo = this.state.imgRef
-    // this.getPhotos(photo)
-    
-    // this.getRefrence()
-    // axios.get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.state.imgRef}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
-    // .then((response) => {
-    //     this.setState({ img_place: response })
-    //   })
+    this.getPhotos()
   }
-
-  //   getPhotos = (photo) => {
-  //     axios
-  //         .get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
-  //         .then((response) => {
-  //             this.setState({ img_place: response })
-  //         })
-  //         .catch((err) => {
-  //             console.log('ERR: ', err);
-  //         });
-  // };
 
   getRefrencce = () => {
     if (this.props.photo) {
-      console.log(this.props.photo[0].photo_reference);
-      console.log(this.props.photo[0].html_attributions);
+      // console.log(this.props.photo[0].photo_reference);
       this.setState({ imgRef: this.props.photo[0].photo_reference })
-      this.setState({ linkRef: this.props.photo[0].html_attributions })
     } else {
       console.log("noPhoto");
-
     }
   }
+
+  getPhotos = () => {F
+    const photo = this.state.imgRef
+    axios
+      .get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
+      .then((response) => {
+        this.setState({img_place: response.data})
+        
+      })
+      .catch((err) => {
+        console.log('ERR: ', err);
+      });
+  };
+
+  getLinke = () => {
+    const photo = this.state.imgRef
+    axios
+      .get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${this.props.placeId}&fields=url,name,rating,formatted_phone_number&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
+      .then((response) => {
+        this.setState({linkRef: response.data.result.url})
+      })
+          .catch((err) => {
+            console.log('ERR: ', err);
+          });
+      }
+  
+
+
   render() {
     return (
       <div id="topHeader" className="boot">
@@ -56,14 +62,14 @@ export default class Card extends Component {
           <div class="card-body">
             <h1 class="card-text">{this.props.placeName}.</h1>
             <p class="card-text">{this.props.placeAddress}</p>
-
             <p class="card-text ratingCon"> Rating: {this.props.placeRating}/5</p>
-
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group botCon">
-                <button type="button" class="btn btn-outline-success btnMore">More
-                {/* {this.props.linke} */}
-                </button>
+                <a href={this.state.linkRef} target="inlike">
+                  <button type="button" class="btn btn-outline-success btnMore"> More
+                   {/* {this.props.linke} */}
+                  </button>
+                </a>
                 <button type="button" class="btn btn-outline-success btnMore">Favorite</button>
               </div>
             </div>
