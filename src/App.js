@@ -134,7 +134,7 @@ export default class App extends Component {
                                             value={this.state.searchWord}
                                         />
                                         <Link to="/Search">
-                                            <button class="btn btn-outline-success" type="button">
+                                            <button  class="fa fa-search" class="btn btn-outline-success" type="button">
                                                 Search</button>
                                         </Link>
                                     </form>
@@ -151,7 +151,7 @@ export default class App extends Component {
                         <Route
                             path='/Places'
                             render={(props) => (
-                                <Places {...props} places={this.state.places} fun={this.getRestaurant}
+                                <Places {...props} places={this.state.places} 
                                 />
                             )}
                         />
@@ -172,7 +172,7 @@ export default class App extends Component {
                         <Route
                             path='/Search'
                             render={(props) => (
-                                <Search {...props} searchWord={this.state.searchResultArry} />
+                                <Search {...props} searchWord={this.state.searchWord} />
                             )}
                         />
 

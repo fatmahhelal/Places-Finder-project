@@ -7,7 +7,7 @@ export default class Search extends Component {
     constructor(props) {
         super();
         this.state = {
-            searchResultArry: {},
+            searchResultArry: [],
         }
     }
     componentDidMount() {
@@ -19,11 +19,11 @@ export default class Search extends Component {
         axios
             .get(query)
             .then((response) => {
-                if (response.length === 0) {
-                    console.log('nores: ', response.data.results);
+                if (!response) {
+                    console.log('no data ');
                 }
                 else {
-                    console.log('here re: ', response.data.results);
+                    console.log('here search re: ', response.data.results);
                     this.setState({ searchResultArry: response.data.results })
                 }
             })

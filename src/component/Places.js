@@ -10,11 +10,11 @@ export default class Places extends Component {
         };
     }
     render() {
-        const places=this.props.places
-        
+        const places = this.props.places
+
         const allPlaces = places.map((eachPlaces, index) => {
             return <Card placeName={eachPlaces.name} placeRating={eachPlaces.rating}
-                placeAddress={eachPlaces.formatted_address} placeId={eachPlaces.place_id}num={index}
+                placeAddress={eachPlaces.formatted_address} placeId={eachPlaces.place_id} num={index}
                 photo={eachPlaces.photos} />;
         })
         return (

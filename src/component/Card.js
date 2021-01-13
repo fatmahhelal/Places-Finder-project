@@ -27,13 +27,13 @@ export default class Card extends Component {
     }
   }
 
-  getPhotos = () => {F
+  getPhotos = () => {
     const photo = this.state.imgRef
     axios
       .get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
       .then((response) => {
-        this.setState({img_place: response.data})
-        
+        this.setState({ img_place: response.data })
+
       })
       .catch((err) => {
         console.log('ERR: ', err);
@@ -45,13 +45,13 @@ export default class Card extends Component {
     axios
       .get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${this.props.placeId}&fields=url,name,rating,formatted_phone_number&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
       .then((response) => {
-        this.setState({linkRef: response.data.result.url})
+        this.setState({ linkRef: response.data.result.url })
       })
-          .catch((err) => {
-            console.log('ERR: ', err);
-          });
-      }
-  
+      .catch((err) => {
+        console.log('ERR: ', err);
+      });
+  }
+
 
 
   render() {

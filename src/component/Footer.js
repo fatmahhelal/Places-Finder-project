@@ -13,23 +13,23 @@ export default class Bottam extends Component {
         setTimeout(() => {
             this.footerText()
         }, 500)
-      }
+    }
     footerText = () => {
         axios
             .get(`http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json`)
             .then((response) => {
                 console.log('RESPONSE: ', response);
                 console.log('DATA: ', response.data);
-                this.setState({quote: response.data.quoteText});
+                this.setState({ quote: response.data.quoteText });
             })
             .catch((err) => {
                 console.log('ERR: ', err);
             });
     };
-    setTimeout=(() => {
+    setTimeout = (() => {
         this.setState({ position: 1 });
-      }, 10000);
-    
+    }, 10000);
+
     render() {
         // this.footerText()
         return (
@@ -43,7 +43,7 @@ export default class Bottam extends Component {
                         <p class="mb-1">Copyright &copy; Fatimah Alhelal</p>
                         <a href="#" className='uppage'>Back to top</a>
 
-            
+
 
 
                         {/* <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.0/getting-started/introduction/">getting started guide</a>.</p> */}
