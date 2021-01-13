@@ -36,7 +36,7 @@ export default class Search extends Component {
 
         return (
             <div>
-                <SearchRe searchResultArry={this.state.searchResultArry}/>
+                <SearchRe searchResultArry={this.state.searchResultArry} />
             </div>
         )
     }

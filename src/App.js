@@ -16,8 +16,6 @@ import Places from './component/Places';
 import Shopping from './component/Shopping';
 import Search from './component/Search';
 
-
-
 export default class App extends Component {
     constructor(props) {
         super();
@@ -37,20 +35,6 @@ export default class App extends Component {
         this.getCffe()
         this.getShopping()
     }
-    // getFav() {
-    //     var faves = [...this.state.faves];
-    //     var placendex = faves.indexOf(place)
-
-    //     if (placendex === -1) {
-    //         faves.push(place);
-    //         console.log(`Adding ${place.name} to faves...`)
-    //     } else {
-    //         faves.splice(placendex, 1);
-    //         console.log(`Removing ${place.name} to faves...`)
-    //     }
-    //     this.setState({ faves })
-
-    // }
 
     getRestaurant = () => {
         axios
@@ -134,7 +118,7 @@ export default class App extends Component {
                                             value={this.state.searchWord}
                                         />
                                         <Link to="/Search">
-                                            <button  class="fa fa-search" class="btn btn-outline-success" type="button">
+                                            <button class="fa fa-search" class="btn btn-outline-success" type="button">
                                                 Search</button>
                                         </Link>
                                     </form>
@@ -151,7 +135,7 @@ export default class App extends Component {
                         <Route
                             path='/Places'
                             render={(props) => (
-                                <Places {...props} places={this.state.places} 
+                                <Places {...props} places={this.state.places}
                                 />
                             )}
                         />

@@ -22,37 +22,22 @@ export default class Card extends Component {
       // console.log(this.props.photo[0].photo_reference);
       this.setState({ imgRef: this.props.photo[0].photo_reference })
       console.log(this.props.photo[0].photo_reference);
-      const photo =this.props.photo[0].photo_reference
-    axios
-      .get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
-      .then((response) => {
-        this.setState({ img_place: response.config.url})
-        
-        console.log(response);
-        console.log(response.config.url);
-      })
-      .catch((err) => {
-        console.log('ERR: ', err);
-      });
+      const photo = this.props.photo[0].photo_reference
+      axios
+        .get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
+        .then((response) => {
+          this.setState({ img_place: response.config.url })
+
+          console.log(response);
+          console.log(response.config.url);
+        })
+        .catch((err) => {
+          console.log('ERR: ', err);
+        });
     } else {
       console.log("noPhoto");
     }
   }
-
-  // getPhotos = () => {
-  //   const photo = this.state.imgRef
-  //   axios
-  //     .get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
-  //     .then((response) => {
-  //       this.setState({ img_place: response.config.url})
-        
-  //       console.log(response);
-  //       console.log(response.config.url);
-  //     })
-  //     .catch((err) => {
-  //       console.log('ERR: ', err);
-  //     });
-  // };
 
   getLinke = () => {
     const photo = this.state.imgRef
@@ -65,8 +50,6 @@ export default class Card extends Component {
         console.log('ERR: ', err);
       });
   }
-
-
 
   render() {
     return (
