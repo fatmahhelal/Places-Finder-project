@@ -126,7 +126,7 @@ export default class App extends Component {
                                             <Link to="/about" class="nav-link active" aria-current="page" >ABOUT</Link>
                                         </li>
                                     </ul>
-                                    <form class="d-flex">
+                                    <form class="d-flex" action='./Search'>
                                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                                             onChange={(e) => {
                                                 this.setState({ searchWord: e.target.value });
