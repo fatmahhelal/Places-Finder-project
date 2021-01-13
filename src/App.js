@@ -22,12 +22,12 @@ export default class App extends Component {
     constructor(props) {
         super();
         this.state = {
-            places: {},
-            placesCoffe: {},
-            placesShopping: {},
+            places:[],
+            placesCoffe: [],
+            placesShopping: [],
             faves: {},
             searchWord: "",
-            searchResultArry: {},
+            searchResultArry: [],
             img_place: "https://img.icons8.com/ios/452/no-image.png"
         };
     }
@@ -57,6 +57,8 @@ export default class App extends Component {
             .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=restaurant&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
             .then((response) => {
                 this.setState({ places: response.data.results })
+                console.log(this.state.places);
+
             })
             .catch((err) => {
                 console.log('ERR: ', err);
@@ -68,6 +70,7 @@ export default class App extends Component {
             .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=shopping_mall&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
             .then((response) => {
                 this.setState({ placesShopping: response.data.results })
+
             })
             .catch((err) => {
                 console.log('ERR: ', err);

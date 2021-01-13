@@ -3,6 +3,12 @@ import Card from './Card'
 import axios from 'axios';
 
 export default class Places extends Component {
+    constructor() {
+        super();
+        this.state = {
+            res: {}
+        };
+    }
     // componentDidMount(){
     //     this.props.fun()
     // }
@@ -17,26 +23,30 @@ export default class Places extends Component {
     //             console.log('ERR: ', err);
     //         });placeLinke={eachPlaces.photos.html_attributions}
     // };
-    componentDidMount() {
-        if (!this.props.places) {
-            console.log("use local")
-        } else {
-            console.log("use its");
-        }
-    }
+    
+        
+    // componentWillUpdate(){
+    //     this.setState({ res: this.props.places})
+    // }
+    // componentDidMount() {
+    //     if (this.props.places.length === 0) {
+    //         console.log("use local")
+    //         localStorage.getItem('places');
+    //         this.setState({ res:  this.props.places })
+
+    //     } else {
+    //         console.log("use props")
+    //         this.setState({ res: this.props.places })
+    //     }
+    // }
+
     render() {
-        const res=this.props.places
-        const allPlaces = res.map((eachPlaces, index) => {
-            const photo = eachPlaces.photos
-            console.log(photo);
-            // const ph= photo.map((element, ind) => {
-            //         console.log(element.photo_reference)
-            //           console.log(element.html_attributions)
-            //       });
+        const places=this.props.places
+        
+        const allPlaces = places.map((eachPlaces, index) => {
             return <Card placeName={eachPlaces.name} placeRating={eachPlaces.rating}
                 placeAddress={eachPlaces.formatted_address} num={index}
-                
-                photo={eachPlaces.photo} />;
+                photo={eachPlaces.photos} />;
         })
         return (
             <div id="topHeader">
