@@ -12,11 +12,11 @@ Shows places list that user can navigate.
 
 - The Places Component:
 Will render a list of places with its information depending on what kind of place the user selected.
-<img src="img/places.png">
+<img src="img/places.PNG">
 
 - The Favorite Component:
 Will render a list of the user favorite places have added there before with its information. And can delete the list.
-<img src="img/fav.png">
+<img src="img/fav.PNG">
 
 
 ### :bulb: Technologies Used.
