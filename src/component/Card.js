@@ -11,8 +11,6 @@ export default class Card extends Component {
       imgRef: "",
       linkRef: '',
       img_place: "https://cdn.onlinewebfonts.com/svg/img_347678.png",
-      FavArry: [],
-      isFav: false,
     };
   }
 
@@ -50,20 +48,6 @@ export default class Card extends Component {
       });
   }
 
-// getFav = (e) => {
-//   this.setState({
-//     isFav: !this.state.isFav
-//   })
-//   if (!this.state.isFav) {
-//     var faves = [...this.state.FavArry];
-//     faves.push(e)
-//     console.log(faves)
-//     console.log("Fav");
-//   }else{
-//     console.log("unFav");
-//   }
-// }
-
 
   render() {
     return (
@@ -71,7 +55,12 @@ export default class Card extends Component {
         <div class="card">
           <img src={this.state.img_place} width='380px' height='300px'></img>
           <div class="card-body">
-            <Fav places={this.props} isFav={this.props.isFav}/>
+
+
+            {/* <p className='material-icons favorite_border'>favorite_border</p> */}
+            <Fav  getFav={this.props.getFav} place={this.props.place}/>
+            
+            
             <h3 class="card-text">{this.props.placeName}.</h3>
             <p class="card-text">{this.props.placeAddress}</p>
             <p class="card-text ratingCon"> Rating: {this.props.placeRating}/5</p>
@@ -79,10 +68,8 @@ export default class Card extends Component {
               <div class="btn-group botCon">
                 <a href={this.state.linkRef} target="inlike">
                   <button type="button" class="btn btn-outline-success btnMore"> More
-                   {/* {this.props.linke} */}
                   </button>
                 </a>
-                {/* <button type="button" class="btn btn-outline-success btnMore" onClick={() => (this.getFav(this.props))}>Favorite</button> */}
               </div>
             </div>
           </div>

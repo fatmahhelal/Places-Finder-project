@@ -26,20 +26,45 @@ export default class App extends Component {
             faves: {},
             searchWord: "",
             searchResultArry: [],
-            img_place: "https://img.icons8.com/ios/452/no-image.png"
-        };
+            img_place: "https://img.icons8.com/ios/452/no-image.png",
+            FavArry: []
+
+        }
     }
-      
     componentDidMount() {
         this.getTourist()
         this.getCffe()
         this.getShopping()
     }
+    deleteFav=()=> {
+        console.log(this.state.FavArry);
+        this.setState({ FavArry: [] })
+    }
 
+    getFav = (place, isFav) => {
+        var faves = [...this.state.FavArry];
+        if (!isFav) {
+            console.log(place);
+            console.log(`Adding to faves...`)
+            faves.push(place)
+            this.setState({FavArry: faves},
+                function(){
+                    console.log(this.state.FavArry);
+                }
+                )
+            console.log(faves);
+        } else {
+            console.log("unFav");
+        }
+    }
+    
     getTourist = () => {
         axios
             .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=tourist_attraction&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
             .then((response) => {
+                response.data.results.forEach(place => {
+                    // place['isFav'] = false
+                });
                 this.setState({ places: response.data.results })
                 console.log(this.state.places);
             })
@@ -94,6 +119,7 @@ export default class App extends Component {
         localStorage.setItem('places', JSON.stringify(this.state.places));
         localStorage.setItem('placesCoffe', JSON.stringify(this.state.placesCoffe));
         localStorage.setItem('placesShopping', JSON.stringify(this.state.placesShopping));
+        localStorage.setItem('FavArry', JSON.stringify(this.state.FavArry));
     }
 
     render() {
@@ -153,7 +179,8 @@ export default class App extends Component {
                         <Route
                             path='/Places'
                             render={(props) => (
-                                <Places {...props} places={this.state.places}
+                                <Places {...props} places={this.state.places} isFav={this.state.isFav} getFav={this.getFav}
+
                                 />
                             )}
                         />
@@ -161,13 +188,13 @@ export default class App extends Component {
                         <Route
                             path='/Coffee'
                             render={(props) => (
-                                <Places {...props} places={this.state.placesCoffe} />
+                                <Places {...props} places={this.state.placesCoffe} isFav={this.state.isFav} getFav={this.getFav}/>
                             )}
                         />
                         <Route
                             path='/Favorite'
                             render={(props) => (
-                                <Favorite{...props} places={this.state.faves} />
+                                <Favorite {...props} places={this.state.FavArry} isFav={this.state.isFav} getFav={this.getFav} deleteFav={this.deleteFav} />
                             )}
                         />
                         <Route exact path="/About" component={About}></Route>
