@@ -16,7 +16,7 @@ Will render a list of places with its information depending on what kind of plac
 
 - The Favorite Component:
 Will render a list of the user favorite places have added there before with its information. And can delete the list.
-<img src="img/fav.PNG">
+<img src="img/fav.PNG" width="400px" height="655px">
 
 
 ### :bulb: Technologies Used.
@@ -28,7 +28,6 @@ Will render a list of the user favorite places have added there before with its 
 * <a href= 'https://developers.google.com/places/web-service/overview'>Google Places API</a> 
 * <a href= 'https://unsplash.com/developers'>Unsplash</a> 
 * Postman 
-* Heroku
 
 ### :sunglasses: User Stories
 * As a user, I should be able to navigate between components.
