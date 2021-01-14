@@ -2,7 +2,7 @@
 # :round_pushpin: Introduction
 Places Finder is a Single-Page-Applications that shows you a list of the nearest tourist, shopping, or restaurants places. You can view the venue details. You can search for places by name or prefer the place to visit later. All of this is done by relying on <a href= 'https://developers.google.com/places/web-service/overview'> Google Places API. </a> 
 
-## :dart: Getting Started
+### :dart: Getting Started
 ### :pencil: Wireframe
 Started the app by designing its layout framework by <a href= 'https://app.diagrams.net/'>Draw.io</a>. This app has 3 main Components as the following:
 
@@ -16,7 +16,7 @@ Will render a list of places with its information depending on what kind of plac
 
 - The Favorite Component:
 Will render a list of the user favorite places have added there before with its information. And can delete the list.
-<img src="img/fav.PNG" width="400px" height="400px">
+<img src="img/fav.PNG" width="500px" height="500px">
 
 
 ### :bulb: Technologies Used.
