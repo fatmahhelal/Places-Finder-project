@@ -2,8 +2,8 @@
 # :round_pushpin: Introduction
 Places Finder is a Single-Page-Applications that shows you a list of the nearest tourist, shopping, or restaurants places. You can view the venue details. You can search for places by name or prefer the place to visit later. All of this is done by relying on <a href= 'https://developers.google.com/places/web-service/overview'> Google Places API. </a> 
 
-# :dart: Getting Started
-## :pencil: Wireframe
+## :dart: Getting Started
+### :pencil: Wireframe
 Started the app by designing its layout framework by <a href= 'https://app.diagrams.net/'>Draw.io</a>. This app has 3 main Components as the following:
 
 - The Home Component:
@@ -19,7 +19,7 @@ Will render a list of the user favorite places have added there before with its 
 <img src="img/fav.png">
 
 
-## :bulb: Technologies Used.
+### :bulb: Technologies Used.
 * HTML
 * CSS
 * JavaScript (ES6)
@@ -30,20 +30,20 @@ Will render a list of the user favorite places have added there before with its 
 * Postman 
 * Heroku
 
-## :sunglasses: User Stories
+### :sunglasses: User Stories
 * As a user, I should be able to navigate between components.
 * As a user, I should be able to search for a specific place by name.
 * As a user, I should be able to view the place information.
 * As a user, I should be able to add places to my favorite list.
 * As a user, I should be able to delete places to my favorite list.
 
-# :mag: App Preview
+## :mag: App Preview
 
-## :link: Links
-* :boom: Live - <a href= > Here </a>
-* :sparkles: Github - <a href= > Here </a>
+### :link: Links
+* Live - <a href='https://pages.git.generalassemb.ly'/> Places Finder </a>
+* Github - <a href='https://git.generalassemb.ly/fatmahhelal/Second-Project'> Here </a>
 
-## Future Features:
+### :sparkles:Future Features:
 - Register and Login User
 - Add Comment on Places
 - Rating Places
