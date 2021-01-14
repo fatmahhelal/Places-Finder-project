@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Favorite from './Favorite';
+import Fav from './Fav';
 
 
 export default class Card extends Component {
@@ -9,7 +11,8 @@ export default class Card extends Component {
       imgRef: "",
       linkRef: '',
       img_place: "https://cdn.onlinewebfonts.com/svg/img_347678.png",
-      FavArry: []
+      FavArry: [],
+      isFav: false,
     };
   }
 
@@ -20,17 +23,12 @@ export default class Card extends Component {
 
   getRefrencce = () => {
     if (this.props.photo) {
-      // console.log(this.props.photo[0].photo_reference);
       this.setState({ imgRef: this.props.photo[0].photo_reference })
-      console.log(this.props.photo[0].photo_reference);
       const photo = this.props.photo[0].photo_reference
       axios
         .get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
         .then((response) => {
           this.setState({ img_place: response.config.url })
-
-          console.log(response);
-          console.log(response.config.url);
         })
         .catch((err) => {
           console.log('ERR: ', err);
@@ -52,17 +50,20 @@ export default class Card extends Component {
       });
   }
 
-  // getFav() {
-  //   var faves = [...this.state.faves];
-  //   if (placendex === -1) {
-  //     FavArry.push(place);
-  //     console.log(`Adding ${place.name} to faves...`)
-  //   } else {
-  //     faves.splice(placendex, 1);
-  //     console.log(`Removing ${place.name} to faves...`)
-  //   }
-  //   this.setState({ faves })
-  // }
+// getFav = (e) => {
+//   this.setState({
+//     isFav: !this.state.isFav
+//   })
+//   if (!this.state.isFav) {
+//     var faves = [...this.state.FavArry];
+//     faves.push(e)
+//     console.log(faves)
+//     console.log("Fav");
+//   }else{
+//     console.log("unFav");
+//   }
+// }
+
 
   render() {
     return (
@@ -70,7 +71,8 @@ export default class Card extends Component {
         <div class="card">
           <img src={this.state.img_place} width='380px' height='300px'></img>
           <div class="card-body">
-            <h1 class="card-text">{this.props.placeName}.</h1>
+            <Fav places={this.props} isFav={this.props.isFav}/>
+            <h3 class="card-text">{this.props.placeName}.</h3>
             <p class="card-text">{this.props.placeAddress}</p>
             <p class="card-text ratingCon"> Rating: {this.props.placeRating}/5</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -80,7 +82,7 @@ export default class Card extends Component {
                    {/* {this.props.linke} */}
                   </button>
                 </a>
-                <button type="button" class="btn btn-outline-success btnMore">Favorite</button>
+                {/* <button type="button" class="btn btn-outline-success btnMore" onClick={() => (this.getFav(this.props))}>Favorite</button> */}
               </div>
             </div>
           </div>

@@ -29,9 +29,9 @@ export default class App extends Component {
             img_place: "https://img.icons8.com/ios/452/no-image.png"
         };
     }
-
+      
     componentDidMount() {
-        this.getRestaurant()
+        this.getTourist()
         this.getCffe()
         this.getShopping()
     }
@@ -47,7 +47,7 @@ export default class App extends Component {
                 console.log('ERR: ', err);
             });
     };
-    
+
     searchResult = () => {
         var search = this.state.searchWord
         var query = `https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&input=${search}&fields=Website,photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`

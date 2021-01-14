@@ -105,14 +105,14 @@
 }
 
 .btnMore {
-  width: 100px;
+  width: 238px;
   margin: 5px !important
   
 }
 .botCon{
   position: absolute;
-  bottom: 10px;
-  left: 20%;
+  bottom: 8px;
+  left: 19%;
   right: 20%;
 }
 .bott{
@@ -121,7 +121,7 @@
 }
 .card {
   width: 400px;
-  height: 650px;
+  height: 570px;
   padding: 5px;
   margin: 20px;
   float: left;
@@ -133,7 +133,7 @@
 }
 .boot{
   margin-bottom: 30px;
-  left: 5%;
+  left: 6%;
   position: relative;
   top: 10px;
   bottom: 1%;
@@ -151,9 +151,6 @@
   display: inline;
 }
 
-a{
-  style: null
-} 
 
 .boutBack{
   background-image: 'https://www.freecodecamp.org/news/content/images/2020/04/w-qjCHPZbeXCQ-unsplash.jpg';
@@ -163,7 +160,7 @@ a{
 
 .ratingCon{
   position: absolute;
-  bottom: 70px;
+  bottom: 42px;
   left: 20%;
   right: 20%;
   background-color:#A0DAA9 ;

@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)  Places Finder
+# :round_pushpin: Introduction
+Places Finder is a Single-Page-Applications that shows you a list of the nearest tourist, shopping, or restaurants places. You can view the venue details. You can search for places by name or prefer the place to visit later. All of this is done by relying on <a href= 'https://developers.google.com/places/web-service/overview'> Google Places API. </a> 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# :dart: Getting Started
+## :pencil: Wireframe
+Started the app by designing its layout framework by <a href= 'https://app.diagrams.net/'>Draw.io</a>. This app has 3 main Components as the following:
 
-## Available Scripts
+- The Home Component:
+Shows places list that user can navigate.
+<img src="img/places.png">
 
-In the project directory, you can run:
+- The Places Component:
+Will render a list of places with its information depending on what kind of place the user selected.
+<img src="img/places.png">
 
-### `npm start`
+- The Favorite Component:
+Will render a list of the user favorite places have added there before with its information. And can delete the list.
+<img src="img/fav.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## :bulb: Technologies Used.
+* HTML
+* CSS
+* JavaScript (ES6)
+* Bootstrap
+* Reacte js
+* <a href= 'https://developers.google.com/places/web-service/overview'>Google Places API</a> 
+* <a href= 'https://unsplash.com/developers'>Unsplash</a> 
+* Postman 
+* Heroku
 
-### `npm test`
+## :sunglasses: User Stories
+* As a user, I should be able to navigate between components.
+* As a user, I should be able to search for a specific place by name.
+* As a user, I should be able to view the place information.
+* As a user, I should be able to add places to my favorite list.
+* As a user, I should be able to delete places to my favorite list.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# :mag: App Preview
 
-### `npm run build`
+## :link: Links
+* :boom: Live - <a href= > Here </a>
+* :sparkles: Github - <a href= > Here </a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Features:
+- Register and Login User
+- Add Comment on Places
+- Rating Places

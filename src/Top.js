@@ -78,8 +78,7 @@ export default class Top extends Component {
                         <Route
                             path='/Places'
                             render={(props) => (
-                                <Places {...props} places={this.state.places} fun={this.getRestaurant}
-                                />
+                                <Places {...props} places={this.state.places}  />
                             )}
                         />
 

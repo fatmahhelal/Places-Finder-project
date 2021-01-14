@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import Card from './Card'
-import SearchRe from './SearchRe';
 
 export default class Search extends Component {
- 
 
     render() {
-        console.log("this is the searchResultArry",this.props.searchResultArry);
-
+        const allPlaces = this.props.searchResultArry.map((eachPlaces, index) => {
+            return <Card placeName={eachPlaces.name} placeRating={eachPlaces.rating}
+                placeAddress={eachPlaces.formatted_address} placeId={eachPlaces.place_id} num={index}
+                photo={eachPlaces.photos} />;
+        })
         return (
-            <div>
-                <SearchRe searchResultArry={this.props.searchResultArry} />
+            <div id="topHeader">
+                {/* <Card /> */}
+                {allPlaces}
             </div>
         )
     }
