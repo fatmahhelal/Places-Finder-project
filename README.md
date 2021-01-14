@@ -16,7 +16,7 @@ Will render a list of places with its information depending on what kind of plac
 
 - The Favorite Component:
 Will render a list of the user favorite places have added there before with its information. And can delete the list.
-<img src="img/fav.PNG" width="400px" height="655px">
+<img src="img/fav.PNG" width="400px" height="400px">
 
 
 ### :bulb: Technologies Used.
