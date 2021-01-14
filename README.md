@@ -39,7 +39,7 @@ Will render a list of the user favorite places have added there before with its 
 ## :mag: App Preview
 
 ### :link: Links
-* Live - <a href='https://pages.git.generalassemb.ly'/> Places Finder </a>
+* Live - <a href='https://pages.git.generalassemb.ly/fatmahhelal/Second-Project/'/> Places Finder </a>
 * Github - <a href='https://git.generalassemb.ly/fatmahhelal/Second-Project'> Here </a>
 
 ### :sparkles:Future Features:
