@@ -1,5 +1,5 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)  Places Finder
-# :round_pushpin: Introduction
+## :round_pushpin: Introduction
 Places Finder is a Single-Page-Applications that shows you a list of the nearest tourist, shopping, or restaurants places. You can view the venue details. You can search for places by name or prefer the place to visit later. All of this is done by relying on <a href= 'https://developers.google.com/places/web-service/overview'> Google Places API. </a> 
 
 ### :dart: Getting Started
@@ -8,15 +8,15 @@ Started the app by designing its layout framework by <a href= 'https://app.diagr
 
 - The Home Component:
 Shows places list that user can navigate.
-<img src="img/places.png">
+<img src="img/Home.PNG">
 
 - The Places Component:
 Will render a list of places with its information depending on what kind of place the user selected.
-<img src="img/places.png">
+<img src="img/places.PNG">
 
 - The Favorite Component:
 Will render a list of the user favorite places have added there before with its information. And can delete the list.
-<img src="img/fav.png">
+<img src="img/fav.PNG">
 
 
 ### :bulb: Technologies Used.
@@ -28,7 +28,6 @@ Will render a list of the user favorite places have added there before with its 
 * <a href= 'https://developers.google.com/places/web-service/overview'>Google Places API</a> 
 * <a href= 'https://unsplash.com/developers'>Unsplash</a> 
 * Postman 
-* Heroku
 
 ### :sunglasses: User Stories
 * As a user, I should be able to navigate between components.
@@ -40,7 +39,7 @@ Will render a list of the user favorite places have added there before with its 
 ## :mag: App Preview
 
 ### :link: Links
-* Live - <a href='https://pages.git.generalassemb.ly'/> Places Finder </a>
+* Live - <a href='https://pages.git.generalassemb.ly/fatmahhelal/Second-Project/'/> Places Finder </a>
 * Github - <a href='https://git.generalassemb.ly/fatmahhelal/Second-Project'> Here </a>
 
 ### :sparkles:Future Features:
