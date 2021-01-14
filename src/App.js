@@ -36,7 +36,7 @@ export default class App extends Component {
         this.getShopping()
     }
 
-    getRestaurant = () => {
+    getTourist = () => {
         axios
             .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=tourist_attraction&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
             .then((response) => {
