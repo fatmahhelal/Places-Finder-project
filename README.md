@@ -8,7 +8,7 @@ Started the app by designing its layout framework by <a href= 'https://app.diagr
 
 - The Home Component:
 Shows places list that user can navigate.
-<img src="img/places.png">
+<img src="img/Home.PNG">
 
 - The Places Component:
 Will render a list of places with its information depending on what kind of place the user selected.
