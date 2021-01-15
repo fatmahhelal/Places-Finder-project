@@ -31,22 +31,15 @@ export default class Bottam extends Component {
     }, 10000);
 
     render() {
-        // this.footerText()
         return (
             <div>
-                <footer class="text-muted py-5" class="Fprimary" id="footer">
+                <footer class="text-muted py-5" class="AppColor" id="footer">
                     <div class="container">
                         <p class="float-end mb-1">
                         </p>
                         <p class="mb-1">"{this.state.quote}"</p>
-
-                        <p class="mb-1">Copyright &copy; Fatimah Alhelal</p>
                         <a href="#" className='uppage'>Back to top</a>
-
-
-
-
-                        {/* <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.0/getting-started/introduction/">getting started guide</a>.</p> */}
+                        <p class="mb-1">Copyright&copy;Fatimah Alhelal</p>
                     </div>
                 </footer>
 

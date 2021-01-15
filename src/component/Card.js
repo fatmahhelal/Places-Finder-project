@@ -39,7 +39,7 @@ export default class Card extends Component {
   getLinke = () => {
     const photo = this.state.imgRef
     axios
-      .get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${this.props.place.place_id}&fields=url,name,rating,formatted_phone_number&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
+      .get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${this.props.placeId}&fields=url,name,rating,formatted_phone_number&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
       .then((response) => {
         this.setState({ linkRef: response.data.result.url })
       })
