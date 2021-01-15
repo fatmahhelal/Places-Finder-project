@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Card from './Card'
+import FavCard from './FavCard'
 
 export default class Favorite extends Component {
     componentWillUpdate() {
@@ -8,7 +8,7 @@ export default class Favorite extends Component {
     render() {
         const places = this.props.places
         const allPlaces = places.map((eachPlaces, index) => {
-            return <Card num={index} isFav={eachPlaces.isFav} getFav={this.props.getFav} place={eachPlaces} />;
+            return <FavCard num={index} photo={eachPlaces.photos} getFav={this.props.getFav} place={eachPlaces} removeFav={this.props.removeFav}/>;
         })
         return (
             <div id="topHeader">

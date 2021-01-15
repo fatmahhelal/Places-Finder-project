@@ -4,7 +4,7 @@ import Favorite from './Favorite';
 import Fav from './Fav';
 
 
-export default class FavCard extends Component {
+export default class Card extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -20,9 +20,8 @@ export default class FavCard extends Component {
   }
 
   getRefrencce = () => {
-    if (this.props.place.photos) {
-      this.setState({ imgRef: this.props.place.photos[0].photo_reference })
-      const photo = this.props.place.photos[0].photo_reference
+    if (this.props.photo) {
+      const photo = this.props.photo[0].photo_reference
       axios
         .get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
         .then((response) => {
@@ -55,6 +54,9 @@ export default class FavCard extends Component {
         <div class="card">
           <img src={this.state.img_place} width='300px' height='300px'></img>
           <div class="card-body">
+          <div className='material-icons favorite' onClick={this.props.removeFav}>
+          <i class="material-icons">favorite</i></div>            
+            
             <h3 class="card-text">{this.props.place.name}.</h3>
             <p class="card-text">{this.props.place.formatted_address}</p>
             <p class="card-text ratingCon"> Rating: {this.props.place.rating}/5</p>

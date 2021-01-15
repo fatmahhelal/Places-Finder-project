@@ -7,14 +7,11 @@ export default class Fav extends Component {
       isFav: false,
     };
   }
-
   handleClick = (e) => {
     console.log('Handling Fave click!')
     this.setState({ isFav: !this.state.isFav })
     this.props.getFav(this.props.place, this.state.isFav)
   }
-
-  
   render() {
     if (!this.state.isFav) {
       return (

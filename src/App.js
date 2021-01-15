@@ -23,7 +23,6 @@ export default class App extends Component {
             places: [],
             placesCoffe: [],
             placesShopping: [],
-            // faves: {},
             searchWord: "",
             searchResultArry: [],
             img_place: "https://img.icons8.com/ios/452/no-image.png",
@@ -45,8 +44,6 @@ export default class App extends Component {
         var faves = [...this.state.FavArry];
         var PlaceIndex = faves.indexOf(place)
         if (PlaceIndex === -1) {
-            console.log(place);
-            console.log(`Adding to faves...`)
             faves.push(place)
             this.setState({ FavArry: faves },
                 function () {
@@ -54,15 +51,21 @@ export default class App extends Component {
                 })
             console.log(faves);
         } else {
-            console.log("unFav");
             faves.splice(PlaceIndex, 1);
             this.setState({ FavArry: faves },
                 function () {
                     console.log(this.state.FavArry);
                 })
-        }
-    }
-
+        }}
+        removeFav = (place, isFav) => {
+            var faves = [...this.state.FavArry]
+                faves.splice(place, 1);
+                this.setState({ FavArry: faves },
+                    function () {
+                        console.log(this.state.FavArry);
+                    })
+                console.log(faves);
+            }
     getTourist = () => {
         axios
             .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=tourist_attraction&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
@@ -180,43 +183,34 @@ export default class App extends Component {
                         <Route
                             path='/Shopping'
                             render={(props) => (
-                                <Places {...props} places={this.state.placesShopping} isFav={this.state.isFav} getFav={this.getFav} />
-                            )}
-                        />
+                                <Places {...props} places={this.state.placesShopping}  getFav={this.getFav} />
+                            )} />
                         <Route
                             path='/Places'
                             render={(props) => (
-                                <Places {...props} places={this.state.places} isFav={this.state.isFav} getFav={this.getFav}
-
-                                />
-                            )}
-                        />
-
+                                <Places {...props} places={this.state.places} getFav={this.getFav} />
+                            )}/>
                         <Route
                             path='/Coffee'
                             render={(props) => (
-                                <Places {...props} places={this.state.placesCoffe} isFav={this.state.isFav} getFav={this.getFav} />
-                            )}
-                        />
+                                <Places {...props} places={this.state.placesCoffe}  getFav={this.getFav} />
+                            )}/>
                         <Route
                             path='/Favorite'
                             render={(props) => (
-                                <Favorite {...props} places={this.state.FavArry} isFav={this.state.isFav} getFav={this.getFav} deleteFav={this.deleteFav} />
-                            )}
-                        />
+                                <Favorite {...props} places={this.state.FavArry} getFav={this.getFav} removeFav={this.removeFav} deleteFav={this.deleteFav}/>
+                            )} />
                         <Route exact path="/About" component={About}></Route>
                         <Route
                             path='/Search'
                             render={(props) => (
-                                <Places {...props} places={this.state.searchResultArry} isFav={this.state.isFav} getFav={this.getFav} />
-                            )}
-                        />
-
+                                <Places {...props} places={this.state.searchResultArry}  getFav={this.getFav}/>
+                            )} />
                     </div>
                 </Router>
 
                 <div className='topHeader'>
-                    <Footer />
+                    <Footer/>
                 </div>
             </div>
         );
