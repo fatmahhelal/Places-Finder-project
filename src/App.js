@@ -36,28 +36,33 @@ export default class App extends Component {
         this.getShopping()
         this.searchResult()
     }
-    deleteFav=()=> {
+    deleteFav = () => {
         console.log(this.state.FavArry);
         this.setState({ FavArry: [] })
     }
 
     getFav = (place, isFav) => {
         var faves = [...this.state.FavArry];
-        if (!isFav) {
+        var PlaceIndex = faves.indexOf(place)
+        if (PlaceIndex === -1) {
             console.log(place);
             console.log(`Adding to faves...`)
             faves.push(place)
-            this.setState({FavArry: faves},
-                function(){
+            this.setState({ FavArry: faves },
+                function () {
                     console.log(this.state.FavArry);
-                }
-                )
+                })
             console.log(faves);
         } else {
             console.log("unFav");
+            faves.splice(PlaceIndex, 1);
+            this.setState({ FavArry: faves },
+                function () {
+                    console.log(this.state.FavArry);
+                })
         }
     }
-    
+
     getTourist = () => {
         axios
             .get(`https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=tourist_attraction&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
@@ -175,7 +180,7 @@ export default class App extends Component {
                         <Route
                             path='/Shopping'
                             render={(props) => (
-                                <Places {...props} places={this.state.placesShopping} isFav={this.state.isFav} getFav={this.getFav}/>
+                                <Places {...props} places={this.state.placesShopping} isFav={this.state.isFav} getFav={this.getFav} />
                             )}
                         />
                         <Route
@@ -190,7 +195,7 @@ export default class App extends Component {
                         <Route
                             path='/Coffee'
                             render={(props) => (
-                                <Places {...props} places={this.state.placesCoffe} isFav={this.state.isFav} getFav={this.getFav}/>
+                                <Places {...props} places={this.state.placesCoffe} isFav={this.state.isFav} getFav={this.getFav} />
                             )}
                         />
                         <Route

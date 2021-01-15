@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import Card from './Card'
 
 export default class Favorite extends Component {
-
-
+    componentWillUpdate() {
+        localStorage.setItem('FavArry', JSON.stringify(this.props.FavArry));
+    }     
     render() {
         const places = this.props.places
         const allPlaces = places.map((eachPlaces, index) => {
