@@ -53,7 +53,7 @@ export default class Card extends Component {
     return (
       <div id="topHeader" className="boot">
         <div class="card">
-          <img src={this.state.img_place} width='380px' height='300px'></img>
+          <img src={this.state.img_place} width='300px' height='300px'></img>
           <div class="card-body">
 
 

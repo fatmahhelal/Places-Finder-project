@@ -106,7 +106,7 @@
 }
 
 .btnMore {
-  width: 238px;
+  width: 190px;
   margin: 5px !important
   
 }
@@ -116,13 +116,13 @@
   left: 19%;
   right: 20%;
 }
-.bott{
+/* .bott{
   margin-bottom: 50px;
   bottom: 50px;
-}
+} */
 .card {
-  width: 400px;
-  height: 570px;
+  width: 320px;
+  height: 570px; 
   padding: 5px;
   margin: 20px;
   float: left;
@@ -134,14 +134,14 @@
 }
 .boot{
   margin-bottom: 30px;
-  left: 6%;
+  left: 2.5%;
   position: relative;
   top: 10px;
   bottom: 1%;
 }
 .cardbanner{
-  width: 400px;
-  height: 550px;
+  width: 320px;
+  height: 530px; 
   padding: 5px;
   margin: 20px;
   float: left;
@@ -168,3 +168,9 @@
   color: whitesmoke;
   font-weight: bold;
 }
+
+/* .bodyCon{
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+} */
