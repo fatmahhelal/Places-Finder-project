@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/fatmahhelal/Second-Project/static/css/main.a40d73c2.chunk.css",
-    "main.js": "/fatmahhelal/Second-Project/static/js/main.e36d28da.chunk.js",
-    "main.js.map": "/fatmahhelal/Second-Project/static/js/main.e36d28da.chunk.js.map",
+    "main.css": "/fatmahhelal/Second-Project/static/css/main.3283c0d7.chunk.css",
+    "main.js": "/fatmahhelal/Second-Project/static/js/main.6260c67e.chunk.js",
+    "main.js.map": "/fatmahhelal/Second-Project/static/js/main.6260c67e.chunk.js.map",
     "runtime-main.js": "/fatmahhelal/Second-Project/static/js/runtime-main.582f7c76.js",
     "runtime-main.js.map": "/fatmahhelal/Second-Project/static/js/runtime-main.582f7c76.js.map",
     "static/js/2.0f08779f.chunk.js": "/fatmahhelal/Second-Project/static/js/2.0f08779f.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.c2031db4.chunk.js": "/fatmahhelal/Second-Project/static/js/3.c2031db4.chunk.js",
     "static/js/3.c2031db4.chunk.js.map": "/fatmahhelal/Second-Project/static/js/3.c2031db4.chunk.js.map",
     "index.html": "/fatmahhelal/Second-Project/index.html",
-    "static/css/main.a40d73c2.chunk.css.map": "/fatmahhelal/Second-Project/static/css/main.a40d73c2.chunk.css.map",
+    "static/css/main.3283c0d7.chunk.css.map": "/fatmahhelal/Second-Project/static/css/main.3283c0d7.chunk.css.map",
     "static/js/2.0f08779f.chunk.js.LICENSE.txt": "/fatmahhelal/Second-Project/static/js/2.0f08779f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.582f7c76.js",
     "static/js/2.0f08779f.chunk.js",
-    "static/css/main.a40d73c2.chunk.css",
-    "static/js/main.e36d28da.chunk.js"
+    "static/css/main.3283c0d7.chunk.css",
+    "static/js/main.6260c67e.chunk.js"
   ]
 }
