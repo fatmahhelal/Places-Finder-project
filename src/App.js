@@ -139,7 +139,7 @@ export default class App extends Component {
                     <div>
                         <nav class="navbar navbar-expand-lg navbar-light AppColor" >
                             <div class="container-fluid">
-                                <a class="py-2" href="#" aria-label="Product">
+                                <a class="py-2" href="banner" aria-label="Product">
                                     <Link to="/" class="nav-link active" aria-current="page"> <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-6/155/vector_285_03-01-512.png" width="24" height="24" /></Link>
                                 </a>
                                 {/* <a class="navbar-brand" href="#">Home</a> */}
@@ -148,6 +148,9 @@ export default class App extends Component {
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                            <Link to="/" class="nav-link active" aria-current="page" href="/banner">Home</Link>
+                                        </li>
                                         <li class="nav-item">
                                             <Link to="/Shopping" class="nav-link active" aria-current="page" href="/Shopping">Shopping</Link>
                                         </li>
@@ -179,7 +182,12 @@ export default class App extends Component {
                                 </div>
                             </div>
                         </nav>
-                        <Route path='/'render={() => (<Banner/>)} />
+                        <Route exact path="/" component={Banner}></Route>
+                        {/* <Route path='/'
+                            render={() => (
+                                <Banner/>
+                            )} /> */}
+                        
                         <Route
                             path='/Shopping'
                             render={(props) => (
