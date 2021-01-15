@@ -4,7 +4,7 @@ import Favorite from './Favorite';
 import Fav from './Fav';
 
 
-export default class Card extends Component {
+export default class FavCard extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -55,7 +55,6 @@ export default class Card extends Component {
         <div class="card">
           <img src={this.state.img_place} width='300px' height='300px'></img>
           <div class="card-body">
-            <Fav  getFav={this.props.getFav} place={this.props.place}/>
             <h3 class="card-text">{this.props.place.name}.</h3>
             <p class="card-text">{this.props.place.formatted_address}</p>
             <p class="card-text ratingCon"> Rating: {this.props.place.rating}/5</p>

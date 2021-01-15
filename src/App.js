@@ -23,18 +23,18 @@ export default class App extends Component {
             places: [],
             placesCoffe: [],
             placesShopping: [],
-            faves: {},
+            // faves: {},
             searchWord: "",
             searchResultArry: [],
             img_place: "https://img.icons8.com/ios/452/no-image.png",
             FavArry: []
-
         }
     }
     componentDidMount() {
         this.getTourist()
         this.getCffe()
         this.getShopping()
+        this.searchResult()
     }
     deleteFav=()=> {
         console.log(this.state.FavArry);
@@ -120,6 +120,8 @@ export default class App extends Component {
         localStorage.setItem('placesCoffe', JSON.stringify(this.state.placesCoffe));
         localStorage.setItem('placesShopping', JSON.stringify(this.state.placesShopping));
         localStorage.setItem('FavArry', JSON.stringify(this.state.FavArry));
+        localStorage.setItem('searchResultArry', JSON.stringify(this.state.searchResultArry));
+
     }
 
     render() {
@@ -201,7 +203,7 @@ export default class App extends Component {
                         <Route
                             path='/Search'
                             render={(props) => (
-                                <Search {...props} searchResultArry={this.state.searchResultArry} />
+                                <Places {...props} places={this.state.searchResultArry} isFav={this.state.isFav} getFav={this.getFav} />
                             )}
                         />
 
