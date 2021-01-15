@@ -179,7 +179,7 @@ export default class App extends Component {
                                 </div>
                             </div>
                         </nav>
-                        <Route exact path="/" component={Banner}></Route>
+                        <Route path='/'render={() => (<Banner/>)} />
                         <Route
                             path='/Shopping'
                             render={(props) => (
