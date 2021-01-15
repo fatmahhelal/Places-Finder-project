@@ -20,9 +20,9 @@ export default class Card extends Component {
   }
 
   getRefrencce = () => {
-    if (this.props.photo) {
-      this.setState({ imgRef: this.props.photo[0].photo_reference })
-      const photo = this.props.photo[0].photo_reference
+    if (this.props.place.photos) {
+      this.setState({ imgRef: this.props.place.photos[0].photo_reference })
+      const photo = this.props.place.photos[0].photo_reference
       axios
         .get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
         .then((response) => {
@@ -39,7 +39,7 @@ export default class Card extends Component {
   getLinke = () => {
     const photo = this.state.imgRef
     axios
-      .get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${this.props.placeId}&fields=url,name,rating,formatted_phone_number&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
+      .get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${this.props.place.place_id}&fields=url,name,rating,formatted_phone_number&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
       .then((response) => {
         this.setState({ linkRef: response.data.result.url })
       })
@@ -55,15 +55,10 @@ export default class Card extends Component {
         <div class="card">
           <img src={this.state.img_place} width='300px' height='300px'></img>
           <div class="card-body">
-
-
-            {/* <p className='material-icons favorite_border'>favorite_border</p> */}
-            <Fav  getFav={this.props.getFav} place={this.props.place}/>
-            
-            
-            <h3 class="card-text">{this.props.placeName}.</h3>
-            <p class="card-text">{this.props.placeAddress}</p>
-            <p class="card-text ratingCon"> Rating: {this.props.placeRating}/5</p>
+            <Fav getFav={this.props.getFav} place={this.props.place} />
+            <h3 class="card-text">{this.props.place.name}.</h3>
+            <p class="card-text">{this.props.place.formatted_address}</p>
+            <p class="card-text ratingCon"> Rating: {this.props.place.rating}/5</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group botCon">
                 <a href={this.state.linkRef} target="inlike">
