@@ -173,7 +173,7 @@ export default class App extends Component {
                         <Route
                             path='/Shopping'
                             render={(props) => (
-                                <Places {...props} places={this.state.placesShopping} />
+                                <Places {...props} places={this.state.placesShopping} isFav={this.state.isFav} getFav={this.getFav}/>
                             )}
                         />
                         <Route
