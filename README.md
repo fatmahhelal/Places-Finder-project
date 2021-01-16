@@ -43,17 +43,17 @@ Will render a list of the user favorite places have added there before with its 
 - The Home Page:
 Shows places list that user can navigate.
 
-<img src="img/homeapp.PNG">
+<img src="img/homeapp.png">
 
 - The Tourist Component:
 Will display a list of places with its information based on the location of the user, which is determined based on the IP location of the user. Also, the user can add a place to his favorites list, or view a place's details
 
-<img src="img/placesapp.PNG">
+<img src="img/placesapp.png">
 
 - The Favorite Component:
 Will display a list of the user favorite places have added there before with its information. And can delete the list or remove one of it.
 
-<img src="img/favapp.PNG">
+<img src="img/favapp.png">
 
 ### :iphone: Phone Web Page
 
