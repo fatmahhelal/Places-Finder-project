@@ -62,7 +62,7 @@ export default class Banner extends Component {
                     </div> <div class="cardbanner">
                         <img src='https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' width='300px' height='450px'></img>
                         <div class="card-body">
-                            <h1 class="card-text">Party</h1>
+                            <h1 class="card-text">ply</h1>
                         </div>
                     </div> <div class="cardbanner">
                         <img src='https://images.unsplash.com/photo-1526662756420-76da8f67f7aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' width='300px' height='450px'></img>

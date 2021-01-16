@@ -43,20 +43,18 @@ Will render a list of the user favorite places have added there before with its 
 - The Home Page:
 Shows places list that user can navigate.
 
-<img src="img/homeapp.png">
-
 - The Tourist Component:
 Will display a list of places with its information based on the location of the user, which is determined based on the IP location of the user. Also, the user can add a place to his favorites list, or view a place's details
-
-<img src="img/placesapp.png">
 
 - The Favorite Component:
 Will display a list of the user favorite places have added there before with its information. And can delete the list or remove one of it.
 
-<img src="img/favapp.png">
+<img src="img/webapp.gif">
 
 ### :iphone: Phone Web Page
+The web app also has a responsive design.
 
+<img src="img/phoneapp.gif">
 
 ### :link: Links
 * Live - <a href='https://pages.git.generalassemb.ly/fatmahhelal/Second-Project/'/> Places Finder </a>
