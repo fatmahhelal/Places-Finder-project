@@ -21,6 +21,7 @@ export default class Card extends Component {
 
   getRefrencce = () => {
     if (this.props.photo) {
+      this.setState({ imgRef: this.props.photo[0].photo_reference })
       const photo = this.props.photo[0].photo_reference
       axios
         .get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng`)
