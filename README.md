@@ -41,12 +41,13 @@ Will render a list of the user favorite places have added there before with its 
 
 ### :computer: The Web Application
 - The Home Page:
+
 Shows places list that user can navigate.
-
 - The Tourist Component:
-Will display a list of places with its information based on the location of the user, which is determined based on the IP location of the user. Also, the user can add a place to his favorites list, or view a place's details
 
+Will display a list of places with its information based on the location of the user, which is determined based on the IP location of the user. Also, the user can add a place to his favorites list, or view a place's details
 - The Favorite Component:
+
 Will display a list of the user favorite places have added there before with its information. And can delete the list or remove one of it.
 
 <img src="img/webapp.gif">
