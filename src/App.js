@@ -148,6 +148,9 @@ export default class App extends Component {
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                            <Link to="/" class="nav-link active" aria-current="page" href="/banner">Home</Link>
+                                        </li>
                                         <li class="nav-item">
                                             <Link to="/Shopping" class="nav-link active" aria-current="page" href="/Shopping">Shopping</Link>
                                         </li>
