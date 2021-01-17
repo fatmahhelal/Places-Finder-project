@@ -57,10 +57,10 @@ The web app also has a responsive design.
 
 <img src="img/phoneapp.gif">
 
-### Challenges
+### :muscle: Challenges
 The main challenge of this project was figuring out how to collect and use the place data from the API and display each place with its information (name, address, rating, image, link). I have to use three endpoints as the following.
 
-- First, get a list of places by 'type' such as coffee places. 
+- First, get a list of places by `type` such as coffee places. 
 
 ```
 https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=&{type}&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng
@@ -123,11 +123,11 @@ https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&type=&{ty
         },
 }
 ```
-- Secondly from the previous result, use the 'image_reference' for each place to get the image link.
+- Secondly from the previous result, use the `image_reference` for each place to get the image link.
 ```
 https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo}&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng
 ```
-- Third, use the 'place_id' for each place to get the website link on Google Map..
+- Third, use the `place_id` for each place to get the website link on Google Map..
 
 ```
 https://maps.googleapis.com/maps/api/place/details/json?place_id=${this.props.place.place_id}&fields=url,name,rating,formatted_phone_number&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng

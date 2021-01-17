@@ -3,12 +3,11 @@ import React, { Component } from 'react'
 export default class About extends Component {
     render() {
         return (
-            <div className='topHeader'>
+            <div className='topHeader' className='about'>
                 <main class="px-3" id="topHeader" className="bott">
                     <h1>About US</h1>
-                    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. 
-                    Cover is a one-page template for buCover is a one-page template for buCover is a one-page template for buDownload, 
-                    edit the text, and add your own fullscreen background photo to make it your own.</p>
+                    <p class="lead" >We are here helping you to decide where to go and discover places around you.
+                     If you have any questions feel free to contact us via live chat.</p>
                 </main>
             </div>
 
