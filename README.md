@@ -1,6 +1,6 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)  Places Finder
 ## :round_pushpin: Introduction
-Places Finder is a Single-Page-Applications that shows you a list of the nearest tourist, shopping, or restaurants places. You can view the venue details. You can search for places by name or prefer the place to visit later. All of this is done by relying on <a href= 'https://developers.google.com/places/web-service/overview'> Google Places API.</a> This API Identify a place based on real-time signals like time of day or current user location. In addition, if the user face problems while using the application or need help, can communicate via the direct chat that was placed by using <a href= 'https://developers.google.com/places/web-service/overview'>TIDIO CHAT</a>
+<a href='https://fatmahhelal.github.io/Places-Finder-project/'/> Places Finder </a> is a Single-Page-Applications that shows you a list of the nearest tourist, shopping, or restaurants places. You can view the venue details. You can search for places by name or prefer the place to visit later. All of this is done by relying on <a href= 'https://developers.google.com/places/web-service/overview'> Google Places API.</a> This API Identify a place based on real-time signals like time of day or current user location. In addition, if the user face problems while using the application or need help, can communicate via the direct chat that was placed by using <a href= 'https://developers.google.com/places/web-service/overview'>TIDIO CHAT</a>
 
 ### :dart: Getting Started
 ### :pencil: Wireframe
@@ -132,10 +132,6 @@ https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${p
 ```
 https://maps.googleapis.com/maps/api/place/details/json?place_id=${this.props.place.place_id}&fields=url,name,rating,formatted_phone_number&key=AIzaSyCHh5FhnJ_5HnOPfucrx62gz7tT3BYgnng
 ```
-
-### :link: Links
-* Live - <a href='https://pages.git.generalassemb.ly/fatmahhelal/Second-Project/'/> Places Finder </a>
-* Github - <a href='https://git.generalassemb.ly/fatmahhelal/Second-Project'> Here </a>
 
 ### :sparkles:Future Features:
 - Register and Login User
